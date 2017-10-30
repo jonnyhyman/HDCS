@@ -1,0 +1,4705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1260</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1260</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1260</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Digital Control Station - Human Control [HDCS] - Disconnected</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>graphics/icon.png</normaloff>graphics/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.502975, y1:0, x2:0.473, y2:1, stop:0 rgba(2, 11, 16, 255), stop:1 rgba(4, 26, 37, 255));</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>1174</x>
+      <y>500</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>sec</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="count">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>485</y>
+      <width>265</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #5e5e5e;
+border: 1px solid white;
+padding-left: 10%;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="count_set">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>686</y>
+      <width>0</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:white;border: 1px solid blue;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="correctionMode">
+     <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+    </property>
+    <property name="minimum">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>32000.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.010000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="count_set_button">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>686</y>
+      <width>0</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; background-color: #0968b0;</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CSYNC">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1214</x>
+      <y>485</y>
+      <width>31</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: red;
+color: white;
+border: 1px solid white;</string>
+    </property>
+    <property name="text">
+     <string>!</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="cmdbg">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>555</y>
+      <width>265</width>
+      <height>417</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+background-color:transparent;
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <widget class="QPushButton" name="stop_button">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+background-color:#B02109;</string>
+     </property>
+     <property name="text">
+      <string>STOP</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f1_button">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>216</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;background-color:#B02109;</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f2_button">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>216</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;background-color:#B02109;</string>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="fire_button">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;background-color:#B02109;</string>
+     </property>
+     <property name="text">
+      <string>FIRE</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="arm_button">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>130</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>216</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;background-color: #0968b0;</string>
+     </property>
+     <property name="text">
+      <string>ARM</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="count_button">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>216</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;background-color: #0968b0;</string>
+     </property>
+     <property name="text">
+      <string>COUNT</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>172</y>
+       <width>221</width>
+       <height>233</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <item>
+       <widget class="QPushButton" name="testdef_button">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>define test</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="log_button">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>log</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="newplot_button">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>create new plot</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="plotfreeze_button">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>freeze plots</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopplots_button">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>close all plots</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="upload_button">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>upload to micros</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reconnect_button">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>connect to adcs</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reset_button">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>GOST Common</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: #083044;
+</string>
+        </property>
+        <property name="text">
+         <string>reset device</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="arm_state">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>132</x>
+       <y>130</y>
+       <width>109</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stop_state">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>20</y>
+       <width>220</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>fire_button</zorder>
+    <zorder>stop_button</zorder>
+    <zorder>f1_button</zorder>
+    <zorder>f2_button</zorder>
+    <zorder>arm_button</zorder>
+    <zorder>count_button</zorder>
+    <zorder>verticalLayoutWidget</zorder>
+    <zorder>arm_state</zorder>
+    <zorder>stop_state</zorder>
+   </widget>
+   <widget class="QPushButton" name="f2">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>625</y>
+      <width>0</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>216</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;background-color:#B02109;</string>
+    </property>
+    <property name="text">
+     <string>f2 active</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="f1">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>585</y>
+      <width>0</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>216</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;background-color:#B02109;</string>
+    </property>
+    <property name="text">
+     <string>f1 active</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="procbg">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>65</y>
+      <width>265</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+background-color:transparent;
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <widget class="QPushButton" name="proc_next_button">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>10</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>216</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;background-color: #0968b0;</string>
+     </property>
+     <property name="text">
+      <string>next</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="proc_set">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #0295ff;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="correctionMode">
+      <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+     </property>
+     <property name="minimum">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>32000.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>15</y>
+       <width>121</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white; background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>procedure</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="procedures" native="true">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>41</y>
+       <width>260</width>
+       <height>369</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="proc_grad_top">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>2</y>
+       <width>262</width>
+       <height>119</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:qlineargradient(spread:pad, x1:0.517075, y1:0, x2:0.493, y2:0.9885, stop:0 rgba(4, 26, 37, 255), stop:1 rgba(255, 255, 255, 0))</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::NoTextInteraction</set>
+     </property>
+    </widget>
+    <zorder>procedures</zorder>
+    <zorder>proc_grad_top</zorder>
+    <zorder>label_2</zorder>
+    <zorder>proc_next_button</zorder>
+    <zorder>proc_set</zorder>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>15</y>
+      <width>86</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white; background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>HDCS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="_mtr_">
+    <property name="geometry">
+     <rect>
+      <x>476</x>
+      <y>521</y>
+      <width>131</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>graphics/motor.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="flames">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>770</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>graphics/burnbabyburn.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="p1probe_p1">
+    <property name="geometry">
+     <rect>
+      <x>588</x>
+      <y>540</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+    </property>
+    <property name="text">
+     <string>l</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t1probe_t1">
+    <property name="geometry">
+     <rect>
+      <x>588</x>
+      <y>580</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+    </property>
+    <property name="text">
+     <string>l</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gprobe_g">
+    <property name="geometry">
+     <rect>
+      <x>476</x>
+      <y>540</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+    </property>
+    <property name="text">
+     <string>l</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t2probe_t2">
+    <property name="geometry">
+     <rect>
+      <x>472</x>
+      <y>782</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+    </property>
+    <property name="text">
+     <string>l</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rbool">
+    <property name="geometry">
+     <rect>
+      <x>522</x>
+      <y>420</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>R</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rnum">
+    <property name="geometry">
+     <rect>
+      <x>452</x>
+      <y>420</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+border-radius: 2px;
+border: 1px solid white;</string>
+    </property>
+    <property name="text">
+     <string>1.0</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rnumbar">
+    <property name="geometry">
+     <rect>
+      <x>453</x>
+      <y>420</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:3px;
+background-color: #1f3645;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="R_u1">
+    <property name="geometry">
+     <rect>
+      <x>444</x>
+      <y>435</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u2">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>369</y>
+      <width>47</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #2d3438;
+background-color: white;
+border-radius: 2px;</string>
+    </property>
+    <property name="text">
+     <string>u2</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u2_I">
+    <property name="geometry">
+     <rect>
+      <x>378</x>
+      <y>387</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="B">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>330</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>B</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="B_u1">
+    <property name="geometry">
+     <rect>
+      <x>512</x>
+      <y>345</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u1">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>252</y>
+      <width>47</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #2d3438;
+background-color: white;
+border-radius: 2px;</string>
+    </property>
+    <property name="text">
+     <string>u1</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="A">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>240</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u1_A">
+    <property name="geometry">
+     <rect>
+      <x>378</x>
+      <y>255</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="A_u1">
+    <property name="geometry">
+     <rect>
+      <x>512</x>
+      <y>254</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u1_B">
+    <property name="geometry">
+     <rect>
+      <x>378</x>
+      <y>270</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="Line" name="hdcsunderscore">
+    <property name="geometry">
+     <rect>
+      <x>1159</x>
+      <y>50</y>
+      <width>87</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>5</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="adcs">
+    <property name="geometry">
+     <rect>
+      <x>178</x>
+      <y>308</y>
+      <width>99</width>
+      <height>53</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #2d3438;
+background-color: white;
+border-radius: 2px;</string>
+    </property>
+    <property name="text">
+     <string>ADCS</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="adcs_u2">
+    <property name="geometry">
+     <rect>
+      <x>224</x>
+      <y>358</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="adcs_u1">
+    <property name="geometry">
+     <rect>
+      <x>222</x>
+      <y>298</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fa1">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>314</y>
+      <width>16</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>28</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #dd0000;background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>⬆</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fa2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>314</y>
+      <width>16</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>28</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #dd0000;background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>⬇</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dcs">
+    <property name="geometry">
+     <rect>
+      <x>95</x>
+      <y>75</y>
+      <width>16</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>28</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #2d3438;background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>⥯</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="N2O">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>90</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+border: 1px solid white;
+border-radius: 50px;
+</string>
+    </property>
+    <property name="text">
+     <string>N O</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>133</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="Line" name="N2O_P0">
+    <property name="geometry">
+     <rect>
+      <x>585</x>
+      <y>120</y>
+      <width>16</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>5</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="N2O_T0">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>150</y>
+      <width>8</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>5</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="I">
+    <property name="geometry">
+     <rect>
+      <x>629</x>
+      <y>403</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>I</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="I_u2">
+    <property name="geometry">
+     <rect>
+      <x>644</x>
+      <y>393</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="I_v2">
+    <property name="geometry">
+     <rect>
+      <x>668</x>
+      <y>412</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="B_v1">
+    <property name="geometry">
+     <rect>
+      <x>559</x>
+      <y>345</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="A_v1">
+    <property name="geometry">
+     <rect>
+      <x>559</x>
+      <y>255</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="v2">
+    <property name="geometry">
+     <rect>
+      <x>705</x>
+      <y>402</y>
+      <width>71</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #5e5e5e;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>756</x>
+      <y>402</y>
+      <width>26</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>v</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="v1">
+    <property name="geometry">
+     <rect>
+      <x>705</x>
+      <y>335</y>
+      <width>71</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #5e5e5e;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>756</x>
+      <y>335</y>
+      <width>26</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>v</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="i1">
+    <property name="geometry">
+     <rect>
+      <x>775</x>
+      <y>335</y>
+      <width>71</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #5e5e5e;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>826</x>
+      <y>335</y>
+      <width>26</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>a</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>826</x>
+      <y>402</y>
+      <width>26</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>a</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="i2">
+    <property name="geometry">
+     <rect>
+      <x>775</x>
+      <y>402</y>
+      <width>71</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #5e5e5e;
+border: 1px solid white;
+border-radius: 2px;
+</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u3disconn">
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>66</y>
+      <width>136</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: #ffae00;</string>
+    </property>
+    <property name="text">
+     <string>! U3 DISCONN</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u4disconn">
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>86</y>
+      <width>136</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: #ffae00;</string>
+    </property>
+    <property name="text">
+     <string>! U4 DISCONN</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pwrdisconn">
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>106</y>
+      <width>136</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: #ffae00;</string>
+    </property>
+    <property name="text">
+     <string>! PWR DISCONN</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="v2_I">
+    <property name="geometry">
+     <rect>
+      <x>696</x>
+      <y>412</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u2_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>501</y>
+      <width>36</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #2d3438;
+background-color: white;
+border-radius: 2px;</string>
+    </property>
+    <property name="text">
+     <string>U2</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u2_f1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>923</x>
+      <y>530</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="f1_u2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>923</x>
+      <y>574</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="v1_A">
+    <property name="geometry">
+     <rect>
+      <x>735</x>
+      <y>325</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="I_electrode">
+    <property name="geometry">
+     <rect>
+      <x>644</x>
+      <y>442</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="v1_B">
+    <property name="geometry">
+     <rect>
+      <x>696</x>
+      <y>345</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="v2_f1">
+    <property name="geometry">
+     <rect>
+      <x>909</x>
+      <y>412</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="f1_v2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>574</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="count_set_button_expand">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>686</y>
+      <width>31</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: rgba(78, 96, 131, 50);</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u2_adcs">
+    <property name="geometry">
+     <rect>
+      <x>326</x>
+      <y>386</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u1_adcs">
+    <property name="geometry">
+     <rect>
+      <x>326</x>
+      <y>270</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="electrode_I">
+    <property name="geometry">
+     <rect>
+      <x>553</x>
+      <y>514</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="u1_R">
+    <property name="geometry">
+     <rect>
+      <x>378</x>
+      <y>284</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="proc_grad_bot">
+    <property name="geometry">
+     <rect>
+      <x>982</x>
+      <y>382</y>
+      <width>262</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0.532, y1:1, x2:0.522, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 0));</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="xyfbg">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>574</y>
+      <width>270</width>
+      <height>216</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438;
+background-color:transparent;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <widget class="Line" name="yflabel">
+     <property name="geometry">
+      <rect>
+       <x>135</x>
+       <y>28</y>
+       <width>1</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>3</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>3</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="xflabel">
+     <property name="geometry">
+      <rect>
+       <x>55</x>
+       <y>108</y>
+       <width>160</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>5</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:#2d3438;
+</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="xf0">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>102</y>
+       <width>53</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+     </property>
+     <property name="text">
+      <string>xxx.xx</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>102</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>n</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="yf0">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>0</y>
+       <width>55</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+     </property>
+     <property name="text">
+      <string>xxx.xx</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>0</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>n</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="xf1">
+     <property name="geometry">
+      <rect>
+       <x>216</x>
+       <y>102</y>
+       <width>53</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+     </property>
+     <property name="text">
+      <string>xxx.xx</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>256</x>
+       <y>102</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>n</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="yf1">
+     <property name="geometry">
+      <rect>
+       <x>102</x>
+       <y>194</y>
+       <width>53</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+     </property>
+     <property name="text">
+      <string>xxx.xx</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>142</x>
+       <y>194</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>HUN-din 1451</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>n</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="it_adcs">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>182</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="adcs_it">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>328</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+color:white;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t1_t1probe">
+    <property name="geometry">
+     <rect>
+      <x>648</x>
+      <y>582</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="p1_p1probe">
+    <property name="geometry">
+     <rect>
+      <x>648</x>
+      <y>544</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="g_gprobe">
+    <property name="geometry">
+     <rect>
+      <x>432</x>
+      <y>542</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t2_t2probe">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>790</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="motor_Rbool">
+    <property name="geometry">
+     <rect>
+      <x>536</x>
+      <y>518</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rbool_motor">
+    <property name="geometry">
+     <rect>
+      <x>536</x>
+      <y>454</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="R_B">
+    <property name="geometry">
+     <rect>
+      <x>536</x>
+      <y>412</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="B_R">
+    <property name="geometry">
+     <rect>
+      <x>536</x>
+      <y>366</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="B_A">
+    <property name="geometry">
+     <rect>
+      <x>534</x>
+      <y>324</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="A_B">
+    <property name="geometry">
+     <rect>
+      <x>534</x>
+      <y>276</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="A_n2o">
+    <property name="geometry">
+     <rect>
+      <x>534</x>
+      <y>232</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="n2o_A">
+    <property name="geometry">
+     <rect>
+      <x>534</x>
+      <y>186</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Wingdings</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:transparent;
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="livelog">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>842</y>
+      <width>0</width>
+      <height>85</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; 
+background-color: transparent;
+border: 1px solid rgba(78, 96, 131, 50);;</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="undoRedoEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QTextEdit::WidgetWidth</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'GOST Common'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="livelog_expand">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>866</y>
+      <width>31</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: rgba(78, 96, 131, 50);</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b2_toggle">
+    <property name="geometry">
+     <rect>
+      <x>844</x>
+      <y>402</y>
+      <width>67</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: transparent;
+color: white;
+border-radius: 2px;
+border: 1px solid white;
+}
+QPushButton::checked{
+  background-color: rgba(78, 96, 131, 50);
+  color: white;
+  border-radius: 2px;
+  border: 1px solid white;
+}</string>
+    </property>
+    <property name="text">
+     <string>bus 2</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b1_toggle">
+    <property name="geometry">
+     <rect>
+      <x>844</x>
+      <y>335</y>
+      <width>67</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: transparent;
+color: white;
+border-radius: 2px;
+border: 1px solid white;
+}
+QPushButton::checked{
+  background-color: rgba(78, 96, 131, 50);
+  color: white;
+  border-radius: 2px;
+  border: 1px solid white;
+}</string>
+    </property>
+    <property name="text">
+     <string>bus 1</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="plotDropFrame">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>890</y>
+      <width>663</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(4, 26, 37, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t0">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>143</y>
+      <width>87</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>664</x>
+      <y>148</y>
+      <width>16</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>C</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="p0">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>104</y>
+      <width>101</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>666</x>
+      <y>110</y>
+      <width>27</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>mpa</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="v0">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>80</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>80</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>v</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dt">
+    <property name="geometry">
+     <rect>
+      <x>64</x>
+      <y>128</y>
+      <width>79</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>126</x>
+      <y>128</y>
+      <width>16</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>s</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="it">
+    <property name="geometry">
+     <rect>
+      <x>64</x>
+      <y>156</y>
+      <width>79</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>126</x>
+      <y>156</y>
+      <width>16</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>C</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="p1">
+    <property name="geometry">
+     <rect>
+      <x>658</x>
+      <y>528</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>726</x>
+      <y>534</y>
+      <width>33</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>kpa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t1">
+    <property name="geometry">
+     <rect>
+      <x>658</x>
+      <y>570</y>
+      <width>91</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>724</x>
+      <y>574</y>
+      <width>16</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>C</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="g">
+    <property name="geometry">
+     <rect>
+      <x>348</x>
+      <y>530</y>
+      <width>85</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>536</y>
+      <width>21</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>g0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="zf">
+    <property name="geometry">
+     <rect>
+      <x>113</x>
+      <y>532</y>
+      <width>85</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>179</x>
+      <y>536</y>
+      <width>16</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>n</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t2">
+    <property name="geometry">
+     <rect>
+      <x>328</x>
+      <y>777</y>
+      <width>85</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>394</x>
+      <y>782</y>
+      <width>16</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>c</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="livelog_freeze_button">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>927</y>
+      <width>0</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: rgba(69, 137, 178, .5);
+	background-color: transparent;
+	border: 1px solid rgba(69, 137, 178, 25);
+}
+
+QPushButton::hover{
+	background-color: rgba(255,255,255,.2);
+}
+
+QPushButton::checked{
+	border: 1px solid rgba(0, 206, 53, .5);
+	background-color: rgba(0,0,0,.3);
+	color:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>freeze</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="livelog_clear_button">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>927</y>
+      <width>0</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>GOST Common</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: rgba(69, 137, 178, .5);
+	background-color: transparent;
+	border: 1px solid rgba(69, 137, 178, 25);
+}
+
+QPushButton::hover{
+	background-color: rgba(255,255,255,.2);
+}
+
+QPushButton::pressed{
+	border: 1px solid rgba(0, 206, 53, .5);
+	background-color: rgba(0,0,0,.3);
+	color:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>clear</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="caution_alarm">
+    <property name="geometry">
+     <rect>
+      <x>1062</x>
+      <y>10</y>
+      <width>83</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: gray;
+background-color:transparent;
+border: 1px solid gray;</string>
+    </property>
+    <property name="text">
+     <string>⨻</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>664</x>
+      <y>186</y>
+      <width>23</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>g</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="m0">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>181</y>
+      <width>87</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="warning_alarm">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>10</y>
+      <width>83</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: gray;
+background-color:B06309;
+border: 1px solid gray;</string>
+    </property>
+    <property name="text">
+     <string>⚠</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>186</y>
+      <width>29</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>g/s</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dm0">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>181</y>
+      <width>95</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HUN-din 1451</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#2d3438; 
+background-color:white;
+padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>xxx.xx</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <zorder>dm0</zorder>
+   <zorder>m0</zorder>
+   <zorder>plotDropFrame</zorder>
+   <zorder>N2O_P0</zorder>
+   <zorder>flames</zorder>
+   <zorder>i2</zorder>
+   <zorder>Rnumbar</zorder>
+   <zorder>f1</zorder>
+   <zorder>f2</zorder>
+   <zorder>count</zorder>
+   <zorder>label_18</zorder>
+   <zorder>count_set</zorder>
+   <zorder>count_set_button</zorder>
+   <zorder>CSYNC</zorder>
+   <zorder>cmdbg</zorder>
+   <zorder>procbg</zorder>
+   <zorder>label</zorder>
+   <zorder>_mtr_</zorder>
+   <zorder>p1probe_p1</zorder>
+   <zorder>t1probe_t1</zorder>
+   <zorder>gprobe_g</zorder>
+   <zorder>t2probe_t2</zorder>
+   <zorder>Rbool</zorder>
+   <zorder>Rnum</zorder>
+   <zorder>u2</zorder>
+   <zorder>R_u1</zorder>
+   <zorder>u2_I</zorder>
+   <zorder>B</zorder>
+   <zorder>B_u1</zorder>
+   <zorder>u1</zorder>
+   <zorder>A</zorder>
+   <zorder>u1_A</zorder>
+   <zorder>A_u1</zorder>
+   <zorder>u1_B</zorder>
+   <zorder>hdcsunderscore</zorder>
+   <zorder>adcs</zorder>
+   <zorder>adcs_u2</zorder>
+   <zorder>adcs_u1</zorder>
+   <zorder>fa1</zorder>
+   <zorder>fa2</zorder>
+   <zorder>dcs</zorder>
+   <zorder>N2O</zorder>
+   <zorder>label_12</zorder>
+   <zorder>N2O_T0</zorder>
+   <zorder>I</zorder>
+   <zorder>I_u2</zorder>
+   <zorder>I_v2</zorder>
+   <zorder>B_v1</zorder>
+   <zorder>A_v1</zorder>
+   <zorder>v2</zorder>
+   <zorder>label_19</zorder>
+   <zorder>v1</zorder>
+   <zorder>label_20</zorder>
+   <zorder>i1</zorder>
+   <zorder>label_21</zorder>
+   <zorder>label_22</zorder>
+   <zorder>u3disconn</zorder>
+   <zorder>u4disconn</zorder>
+   <zorder>pwrdisconn</zorder>
+   <zorder>v2_I</zorder>
+   <zorder>u2_2</zorder>
+   <zorder>u2_f1</zorder>
+   <zorder>f1_u2</zorder>
+   <zorder>v1_A</zorder>
+   <zorder>I_electrode</zorder>
+   <zorder>v1_B</zorder>
+   <zorder>v2_f1</zorder>
+   <zorder>f1_v2</zorder>
+   <zorder>count_set_button_expand</zorder>
+   <zorder>u2_adcs</zorder>
+   <zorder>u1_adcs</zorder>
+   <zorder>electrode_I</zorder>
+   <zorder>u1_R</zorder>
+   <zorder>proc_grad_bot</zorder>
+   <zorder>xyfbg</zorder>
+   <zorder>it_adcs</zorder>
+   <zorder>adcs_it</zorder>
+   <zorder>t1_t1probe</zorder>
+   <zorder>p1_p1probe</zorder>
+   <zorder>g_gprobe</zorder>
+   <zorder>t2_t2probe</zorder>
+   <zorder>motor_Rbool</zorder>
+   <zorder>Rbool_motor</zorder>
+   <zorder>R_B</zorder>
+   <zorder>B_R</zorder>
+   <zorder>B_A</zorder>
+   <zorder>A_B</zorder>
+   <zorder>A_n2o</zorder>
+   <zorder>n2o_A</zorder>
+   <zorder>livelog</zorder>
+   <zorder>livelog_expand</zorder>
+   <zorder>b2_toggle</zorder>
+   <zorder>b1_toggle</zorder>
+   <zorder>t0</zorder>
+   <zorder>label_8</zorder>
+   <zorder>p0</zorder>
+   <zorder>label_7</zorder>
+   <zorder>v0</zorder>
+   <zorder>label_9</zorder>
+   <zorder>dt</zorder>
+   <zorder>label_11</zorder>
+   <zorder>it</zorder>
+   <zorder>label_10</zorder>
+   <zorder>p1</zorder>
+   <zorder>label_3</zorder>
+   <zorder>t1</zorder>
+   <zorder>label_5</zorder>
+   <zorder>g</zorder>
+   <zorder>label_4</zorder>
+   <zorder>zf</zorder>
+   <zorder>label_17</zorder>
+   <zorder>t2</zorder>
+   <zorder>label_6</zorder>
+   <zorder>livelog_freeze_button</zorder>
+   <zorder>livelog_clear_button</zorder>
+   <zorder>caution_alarm</zorder>
+   <zorder>label_13</zorder>
+   <zorder>warning_alarm</zorder>
+   <zorder>label_14</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

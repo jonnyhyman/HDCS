@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1056</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Test Definition Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.502975, y1:0, x2:0.473, y2:1, stop:0 rgba(2, 11, 16, 255), stop:1 rgba(4, 26, 37, 255));</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="GraphicsLayoutWidget" name="testProfileView">
+        <property name="minimumSize">
+         <size>
+          <width>750</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+border: 1px solid #4589b2;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="midLineWidth">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_5" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>273</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>273</width>
+            <height>999</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_23">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>a</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QSlider" name="A_del_slide">
+               <property name="styleSheet">
+                <string notr="true">QSlider{
+	background-color: transparent;
+} 
+QSlider::groove:horizontal {
+     border: 0px solid #999999;
+     height: 8px;
+     background: rgba(78, 96, 131, 50);
+     margin: 2px 0;
+ }
+
+QSlider::groove:horizontal:hover {
+	background-color: rgba(255,255,255,.2);
+ }
+
+ QSlider::handle:horizontal {
+     background: transparent;
+     border: 1px solid #4589b2;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+ }
+
+ QSlider::handle:horizontal:hover {
+     background-color: rgba(255,255,255,.2);
+     border: 1px solid #00ce35;
+ }</string>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDoubleSpinBox" name="A_del">
+               <property name="styleSheet">
+                <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 1px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="label_24">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>sec</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_29">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>delay</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_17">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>a</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDoubleSpinBox" name="A_dur">
+               <property name="styleSheet">
+                <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 1px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="label_21">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>sec</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QSlider" name="A_dur_slide">
+               <property name="styleSheet">
+                <string notr="true">QSlider{
+	background-color: transparent;
+} 
+QSlider::groove:horizontal {
+     border: 0px solid #999999;
+     height: 8px;
+     background: rgba(78, 96, 131, 50);
+     margin: 2px 0;
+ }
+
+QSlider::groove:horizontal:hover {
+	background-color: rgba(255,255,255,.2);
+ }
+
+ QSlider::handle:horizontal {
+     background: transparent;
+     border: 1px solid #4589b2;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+ }
+
+ QSlider::handle:horizontal:hover {
+     background-color: rgba(255,255,255,.2);
+     border: 1px solid #00ce35;
+ }</string>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_30">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>durat</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_12">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_31">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>b</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDoubleSpinBox" name="B_del">
+               <property name="styleSheet">
+                <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 1px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QSlider" name="B_del_slide">
+               <property name="styleSheet">
+                <string notr="true">QSlider{
+	background-color: transparent;
+} 
+QSlider::groove:horizontal {
+     border: 0px solid #999999;
+     height: 8px;
+     background: rgba(78, 96, 131, 50);
+     margin: 2px 0;
+ }
+
+QSlider::groove:horizontal:hover {
+	background-color: rgba(255,255,255,.2);
+ }
+
+ QSlider::handle:horizontal {
+     background: transparent;
+     border: 1px solid #4589b2;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+ }
+
+ QSlider::handle:horizontal:hover {
+     background-color: rgba(255,255,255,.2);
+     border: 1px solid #00ce35;
+ }</string>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="label_32">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>sec</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_33">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>delay</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_13">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_34">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>b</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDoubleSpinBox" name="B_dur">
+               <property name="styleSheet">
+                <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 1px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QSlider" name="B_dur_slide">
+               <property name="styleSheet">
+                <string notr="true">QSlider{
+	background-color: transparent;
+} 
+QSlider::groove:horizontal {
+     border: 0px solid #999999;
+     height: 8px;
+     background: rgba(78, 96, 131, 50);
+     margin: 2px 0;
+ }
+
+QSlider::groove:horizontal:hover {
+	background-color: rgba(255,255,255,.2);
+ }
+
+ QSlider::handle:horizontal {
+     background: transparent;
+     border: 1px solid #4589b2;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+ }
+
+ QSlider::handle:horizontal:hover {
+     background-color: rgba(255,255,255,.2);
+     border: 1px solid #00ce35;
+ }</string>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="label_35">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>sec</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_36">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>durat</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_14">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_37">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>i</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDoubleSpinBox" name="I_del">
+               <property name="styleSheet">
+                <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 1px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QSlider" name="I_del_slide">
+               <property name="styleSheet">
+                <string notr="true">QSlider{
+	background-color: transparent;
+} 
+QSlider::groove:horizontal {
+     border: 0px solid #999999;
+     height: 8px;
+     background: rgba(78, 96, 131, 50);
+     margin: 2px 0;
+ }
+
+QSlider::groove:horizontal:hover {
+	background-color: rgba(255,255,255,.2);
+ }
+
+ QSlider::handle:horizontal {
+     background: transparent;
+     border: 1px solid #4589b2;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+ }
+
+ QSlider::handle:horizontal:hover {
+     background-color: rgba(255,255,255,.2);
+     border: 1px solid #00ce35;
+ }</string>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="label_38">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>sec</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_39">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>delay</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_15">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_40">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>i</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDoubleSpinBox" name="I_dur">
+               <property name="styleSheet">
+                <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 1px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QSlider" name="I_dur_slide">
+               <property name="styleSheet">
+                <string notr="true">QSlider{
+	background-color: transparent;
+} 
+QSlider::groove:horizontal {
+     border: 0px solid #999999;
+     height: 8px;
+     background: rgba(78, 96, 131, 50);
+     margin: 2px 0;
+ }
+
+QSlider::groove:horizontal:hover {
+	background-color: rgba(255,255,255,.2);
+ }
+
+ QSlider::handle:horizontal {
+     background: transparent;
+     border: 1px solid #4589b2;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+ }
+
+ QSlider::handle:horizontal:hover {
+     background-color: rgba(255,255,255,.2);
+     border: 1px solid #00ce35;
+ }</string>
+               </property>
+               <property name="maximum">
+                <number>99</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="tickPosition">
+                <enum>QSlider::NoTicks</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="label_41">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>sec</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_42">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>durat</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_17">
+             <item row="0" column="4">
+              <widget class="QLabel" name="label_44">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>sec</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_45">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>durat</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDoubleSpinBox" name="R_dur">
+               <property name="styleSheet">
+                <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 1px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_43">
+               <property name="font">
+                <font>
+                 <family>HUN-din 1451</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white;background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>r</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QSlider" name="R_dur_slide">
+               <property name="styleSheet">
+                <string notr="true">QSlider{
+	background-color: transparent;
+} 
+QSlider::groove:horizontal {
+     border: 0px solid #999999;
+     height: 8px;
+     background: rgba(78, 96, 131, 50);
+     margin: 2px 0;
+ }
+
+QSlider::groove:horizontal:hover {
+	background-color: rgba(255,255,255,.2);
+ }
+
+ QSlider::handle:horizontal {
+     background: transparent;
+     border: 1px solid #4589b2;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+ }
+
+ QSlider::handle:horizontal:hover {
+     background-color: rgba(255,255,255,.2);
+     border: 1px solid #00ce35;
+ }</string>
+               </property>
+               <property name="maximum">
+                <number>99</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="tickPosition">
+                <enum>QSlider::NoTicks</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="regulatorSetup">
+             <property name="font">
+              <font>
+               <family>Futura BQ</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 5px;
+}
+
+QPushButton::hover{
+	background-color: rgba(255,255,255,.2);
+}
+
+QPushButton::pressed{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+             </property>
+             <property name="text">
+              <string>REGULATOR SETUP</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_4" native="true">
+             <layout class="QGridLayout" name="gridLayout_6">
+              <item row="2" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetNoConstraint</enum>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_16">
+                  <property name="font">
+                   <font>
+                    <family>Futura BQ</family>
+                    <pointsize>11</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: white;background-color: transparent;</string>
+                  </property>
+                  <property name="text">
+                   <string>TEST NOTES</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="testNotes">
+                  <property name="font">
+                   <font>
+                    <family>GOST Common</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: white;
+background-color: transparent;
+border: 1px solid #4589b2;
+padding: 5px;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <property name="styleSheet">
+              <string notr="true">background: transparent;</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_15">
+                <property name="font">
+                 <font>
+                  <family>Futura BQ</family>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:  white;</string>
+                </property>
+                <property name="text">
+                 <string>START AT T -</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="cancelButton">
+                <property name="font">
+                 <font>
+                  <family>Futura BQ</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 5px;
+}
+
+QPushButton::hover{
+	background-color: rgba(255,255,255,.2);
+}
+
+QPushButton::pressed{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+                </property>
+                <property name="text">
+                 <string>CANCEL</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="uploadButton">
+                <property name="font">
+                 <font>
+                  <family>Futura BQ</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 5px;
+}
+
+QPushButton::hover{
+	background-color: rgba(255,255,255,.2);
+}
+
+QPushButton::pressed{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+                </property>
+                <property name="text">
+                 <string>UPLOAD</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDoubleSpinBox" name="tminus">
+                <property name="font">
+                 <font>
+                  <family>Futura BQ</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QDoubleSpinBox{
+	color: white;
+	background-color: transparent;
+	border: 1px solid #4589b2;
+	padding: 5px;
+}
+
+
+
+QDoubleSpinBox::hover{
+	border: 1px solid #00ce35;
+	background-color: rgba(0,0,0,.3);
+}</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::NoButtons</enum>
+                </property>
+                <property name="maximum">
+                 <double>32767.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.010000000000000</double>
+                </property>
+                <property name="value">
+                 <double>20.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QFrame" name="frame_4">
+      <property name="styleSheet">
+       <string notr="true">background-color:transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1056</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>GOST Common</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background: rgba(255,255,255,.2);
+padding:5px;</string>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuSave">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="openFile"/>
+   </widget>
+   <addaction name="menuSave"/>
+  </widget>
+  <action name="openFile">
+   <property name="text">
+    <string>Open Definition File</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>GOST Common</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionSave_Definition">
+   <property name="text">
+    <string>Save Definition</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>GOST Common</family>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsLayoutWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

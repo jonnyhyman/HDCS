@@ -1,0 +1,18 @@
+active_blue_solid ='#0053dd'
+transparent     ='transparent'
+warning_solid  ='#dd6300'
+disabled_lite ='#0088da'
+disabled     ='#2d3438'
+active_blue  ='#4589b2'
+active_green ='#00ce35'
+white        ='#ffffff'
+warning      ='#dd6300'
+critical     ='#dd0000'
+
+electricity ='0053dd'
+sensorlow   ='23b08a'
+sensorok    ='23b029'
+sensorhigh  ='b09723'
+
+control     ='ffae00'
+emergency   ='ff0000'

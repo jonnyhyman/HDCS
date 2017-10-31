@@ -1,8 +1,6 @@
 
 **Human Digital Control Station [HDCS]**
 ----------
-![View](https://photos-4.dropbox.com/t/2/AADOTByn3Gc_uAQeEVfd4g9bEARQ9L2q0yWo9NMQgamDQw/12/9419831/png/32x32/1/_/1/2/hdcs.png/EJLXggcYm_YOIAcoBw/4bCbrWV41BHylh2dO5toJZT6UY5ltV0EtUFjWbhFklQ?size=1600x1200&size_mode=3)
-
 **HDCS is a command, control, and instrumentation interface.**
 
 *Designed initially for use with testing small hybrid rockets, it can be expanded or reduced to fit the needs of many other instrumentation and control applications.*

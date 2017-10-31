@@ -3,7 +3,7 @@
 Control_Keys = ['A','B','F1','I','R',
                 'u1','u2','adcs','hdcs',
                 'E','a','F1','F2','B1','B2',
-                'C','C_','Cm']
+                'Cm']
 
  # which control variables are actionable via adcs
 Command_Keys = ['E','a','F1','F2','B1','B2','c1','c1_','c2','c2_','Cm',
@@ -110,7 +110,6 @@ State_Limits = {
 }
 
 State_Limits_keys = State_Limits.keys()
-
 
 #----------------------------------------------------- HDCS ONLY
 

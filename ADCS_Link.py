@@ -82,21 +82,26 @@ class ADCS_Link(object):
             self.n=0
 
     def persistence_check(self,cmd,state):
+        """ Re-send critical commands which were activated, but not carried out """
 
         self.persist_cmds = {}
         self.cmd = cmd
         self.state = state
 
-        for key in [key for key in cmd if key in Definitions.Persist_Criteria]:
-            if key in self.last_newCmds:
-                for criterion in Definitions.Persist_Criteria[key]:
-                    try:
-                        if not eval(criterion):
-                            self.persist_cmds[key] = cmd[key]
-                            break
-                    except Exception as e: # eval can cause errors
-                        print('ADCS_Link.persistence_check exception >>',e)
-                        pass
+        if self.state['E'] != 1:
+
+            # ONLY allow cmd persistence if there is no emergency stop in place
+
+            for key in [key for key in cmd if key in Definitions.Persist_Criteria]:
+                if key in self.last_newCmds:
+                    for criterion in Definitions.Persist_Criteria[key]:
+                        try:
+                            if not eval(criterion):
+                                self.persist_cmds[key] = cmd[key]
+                                break
+                        except Exception as e: # eval can cause errors
+                            print('ADCS_Link.persistence_check exception >>',e)
+                            pass
 
 
     def send(self,cmd,state):

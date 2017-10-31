@@ -538,6 +538,8 @@ def updateAnnunciator(gui,init=False):
         gui.u3disconn.setVisible(not gui.State['u3'])
         gui.u4disconn.setVisible(not gui.State['u4'])
         gui.pwrdisconn.setVisible(not (gui.State['B1'] and gui.State['B1']) )
+        gui.CSYNC.setVisible((gui.State['C1'] - gui.State['C2']
+                                    >= gui.State_Limits['C1-2'][1]))
 
         if gui.State['A'] and gui.State['B'] and gui.State['Rbool']:
             gui.flames.setVisible(1)

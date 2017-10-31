@@ -1,6 +1,8 @@
 
 **Human Digital Control Station [HDCS]**
 ----------
+![View](https://www.dropbox.com/s/5no5j96qf4acaj9/hdcs.png?raw=1)
+
 **HDCS is a command, control, and instrumentation interface.**
 
 *Designed initially for use with testing small hybrid rockets, it can be expanded or reduced to fit the needs of many other instrumentation and control applications.*
@@ -23,7 +25,7 @@ You may find you are missing the **dependencies**:
 ----------
 This code is intimately intertwined with a number of other systems, chief of which is ADCS. The [ADCS code can be found here](https://github.com/jonnyhyman/ADCS/).
 
-![Structure](https://www.dropbox.com/s/3ml79z0iyfuka53/arch.png?=raw=1)
+![Structure](https://www.dropbox.com/s/3ml79z0iyfuka53/arch.png?raw=1)
 
 Ultimately, the micro-controllers (far right of diagram) take the majority of the data in, and actuate the commands.
 

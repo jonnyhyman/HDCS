@@ -23,7 +23,7 @@ You may find you are missing the **dependencies**:
 ----------
 This code is intimately intertwined with a number of other systems, chief of which is ADCS. The [ADCS code can be found here](https://github.com/jonnyhyman/ADCS/).
 
-![Structure](https://www.dropbox.com/s/3ml79z0iyfuka53/arch.png?dl=0)
+![Structure](https://www.dropbox.com/s/3ml79z0iyfuka53/arch.png)
 
 Ultimately, the micro-controllers (far right of diagram) take the majority of the data in, and actuate the commands.
 

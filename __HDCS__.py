@@ -52,6 +52,7 @@ import GUI_procedures as proc
 import Test_definition as TestDef
 import Definitions
 
+from Debriefer import Debriefer
 from GUI_accessories import Dialog, Upload, Reset, Sound
 from Actuation import Wireless_Control
 from GUI_custom import labelRect
@@ -110,6 +111,7 @@ class Interface(QtWidgets.QMainWindow,design.Ui_MainWindow):
         self.testdef_button.clicked.connect(self.tdf.open)
         self.fire_button.clicked.connect(self.fire_trigger)
         self.livelog_expand.clicked.connect(self.livelog_toggle)
+        self.debriefer_button.clicked.connect(self.debriefer_open)
         self.reconnect_button.clicked.connect(self.adcs_reconnect)
         self.livelog_clear_button.clicked.connect(self.livelog_clear)
         self.livelog_freeze_button.clicked.connect(self.livelog_freeze)
@@ -275,6 +277,9 @@ class Interface(QtWidgets.QMainWindow,design.Ui_MainWindow):
     def reset_device(self):
         """ Reset button call """
         self.resetWindow = Reset(self)
+
+    def debriefer_open(self):
+        self.debrieferWindow = Debriefer(self)
 
     def sound(self,selection):
         self.sound_controller.play(selection)

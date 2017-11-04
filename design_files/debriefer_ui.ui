@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>944</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Debriefer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>graphics/icon.png</normaloff>graphics/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.502975, y1:0, x2:0.473, y2:1, stop:0 rgba(2, 11, 16, 255), stop:1 rgba(4, 26, 37, 255));</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QTableView" name="tableView">
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QAbstractItemView{	
+	background: #C7CCC5;
+}
+QAbstractItemView::QScrollBar:vertical {              
+	border: 1px solid #999999;
+	background:white;
+	width:10px;    
+	margin: 0px 0px 0px 0px;
+}
+QAbstractItemView::QScrollBar::handle:vertical {
+	background: #4589b2;
+	min-height: 0px;
+}
+QAbstractItemView::QScrollBar::add-line:vertical {
+	background: #4589b2;
+	height: 0px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QAbstractItemView::QScrollBar::sub-line:vertical {
+	background: #4589b2;
+	height: 0 px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}</string>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::NoPen</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>49</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>30</number>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="GraphicsLayoutWidget" name="graphicsView">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(230, 230, 230);
+color: white;
+border: 1px solid white;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsLayoutWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

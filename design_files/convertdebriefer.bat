@@ -1,0 +1,1 @@
+C:/Python35-32/Lib/site-packages/PyQt5/pyuic5.bat -x debriefer_ui.ui -o debriefer_ui.py

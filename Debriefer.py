@@ -78,7 +78,10 @@ class Debriefer(QtWidgets.QMainWindow,design.Ui_MainWindow):
             self.logname = ['./logs/',self.defname.replace('def','log'),'.csv']
             self.logname = ''.join(self.logname)
 
-            self.build_dataframe()
+            try:
+                self.build_dataframe()
+            except FileNotFoundError:
+                return 0
 
             return 1
         else:
@@ -101,6 +104,8 @@ class Debriefer(QtWidgets.QMainWindow,design.Ui_MainWindow):
         relevant_indices = np.intersect1d(relevant_indices[0],relevant_indices[1])
 
         self.dataframe = self.dataframe.iloc[relevant_indices]
+
+        return True
 
     def make_tableView(self):
         """ draw the table view """
@@ -146,6 +151,7 @@ class Debriefer(QtWidgets.QMainWindow,design.Ui_MainWindow):
             cn+=1
 
     def selected_columns(self, selected, deselected):
+        """ figure out which columns to filter the graph by """
 
         selection = self.tableView.selectedIndexes()
 

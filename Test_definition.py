@@ -181,7 +181,7 @@ class TestDefinition(QtWidgets.QMainWindow,test.Ui_MainWindow):
         try:
             mat = convertDefToMatrix(definition)
         except TypeError as e:
-            self.d = Dialog(reason='regulator function not being defined',
+            self.d = Dialog(reason=str(e),
                             function='TestDefinition.save')
             return
 
@@ -234,11 +234,19 @@ class RegulatorSetup(QtWidgets.QMainWindow,reg.Ui_MainWindow):
         super(self.__class__, self).__init__()
         self.setupUi(self)
 
+        # reformat last script text to function header-less (and resolve tabs)
         last_script_text = open('RegulatorScript.py','r').read()
-        last_script_text = last_script_text[last_script_text.index(':')+1:]
+        last_script_text = last_script_text[last_script_text.index(':')+2:]
+        last_script_text = last_script_text.split('    ') # split by tabs
+        last_script_text.pop(0)
+        last_script_text = ['\t' if p=='' else p for p in last_script_text]
+        last_script_text = ''.join([part for part in last_script_text])
+
+        print(last_script_text)
 
         # set text to function header-less version
         self.textEdit.setPlainText(last_script_text)
+        print(self.textEdit.toPlainText())
 
         self.endT = endT
         self.textEdit.setTabStopWidth(18)
@@ -257,9 +265,11 @@ class RegulatorSetup(QtWidgets.QMainWindow,reg.Ui_MainWindow):
             Python file, compiles it to check Syntax, then executes it to plot
         """
 
-        first = 'def Regulator(t):\n\n'
+        first = 'def Regulator(t):\n'
         text  = '\t'
         text += self.textEdit.toPlainText()
+
+        print(text)
 
         snam = 'RegulatorScript.py'
         try:
@@ -268,7 +278,9 @@ class RegulatorSetup(QtWidgets.QMainWindow,reg.Ui_MainWindow):
             pass
 
         text = text.replace('\n','\n\t')
-        text = text.replace('\t','   ')
+        print(text)
+        text = text.replace('\t','    ')
+        print(text)
 
         save = open(snam,'w')
         save.write(first)
@@ -310,6 +322,7 @@ class RegulatorSetup(QtWidgets.QMainWindow,reg.Ui_MainWindow):
         xs = np.array(xs)
         typ = [type(item)==np.int32 or type(item)==np.float32
             or type(item)==np.int64 or type(item)==np.float64 for item in xs]
+
         if all(typ):
             self.Rplot.setData(ts,xs)
         else:

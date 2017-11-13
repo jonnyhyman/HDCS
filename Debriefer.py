@@ -57,7 +57,8 @@ class Debriefer(QtWidgets.QMainWindow,design.Ui_MainWindow):
                              'v1','v2','i1','i2',
                              'zf','z0','z1','z2',
                              'Fa1','Fa2',
-                             'm0','p0','p1','t0','t1','t2']
+                             'm0','p0','p1','t0','t1','t2',
+                             'u1','u2','u3','u4']
 
         if self.openFile_window():  # force select at startup
             self.make_tableView()

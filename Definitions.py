@@ -60,6 +60,7 @@ State = {
     'C1'  :  0, # u1 count
     'C2'  :  0, # u2 count
     'C1-2':  0, # c1-c2
+    'HDT' :  0,
     # Below here are HDCS "GENERATED"/calculated variables
     'count': -30,
     'zf'  : -1,

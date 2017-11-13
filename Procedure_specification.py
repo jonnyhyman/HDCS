@@ -125,7 +125,7 @@ Procedures[0.6] = [("Nte: Test Run Activation [below the line]",),
                     ('Stp: First test after hardware-reset?',),
                         ('Sub: Safety briefing',),
                     ('Stp: Valve opening on F3',),
-                    ('Stp: Valve opening on N2O',"self.gui.State['p0']>self.gui.State_Limits['p0'][0]"),
+                    ('Stp: Valve opening on N2O',"self.gui.State['p0']>1"),
                         ('Nte: Do not open quickly,',),
                         ('Nte: prevent adiabatic compression',),
 
@@ -149,12 +149,14 @@ Procedures[0.6] = [("Nte: Test Run Activation [below the line]",),
                     ('Stp: STOP',
                         "self.gui.State['E']",
                         "self.gui.stop_button.isChecked()"),
+                    ('Stp: Power buses OFF',"self.gui.State['B1']==0","self.gui.State['B2']==0"),
                     ('Stp: Secure the data',),
-                        ('Sub: Freeze plots',),
                         ('Sub: HDCS Log OFF','self.gui.log.active==0',),
-                        ('Sub: Reset ADCS',),
                         ('Sub: Stop camera recording',),
-                        ('Stp: Power buses OFF',"self.gui.State['B1']==0","self.gui.State['B2']==0"),
+                        ('Nte: Next step disables F1 temp.',),
+                        ('Sub: Reset ADCS',),
+
+
 
                     ('Stp: Go to 0.7 [Deactivation]',),
                   ]

@@ -41,7 +41,7 @@ In addition to the performance improvements, this also allows us to drag and dro
 
 ---
 
-The creation of a new instrumentation variable into the interface is very simple.
+Creation of a new instrumentation variable into the interface
 ---
 
 1. Open the MainWindow GUI file (mainwindow.ui) found in the "design_files" folder. *Note that this is a Qt Creator / Qt Designer file, so get that program first to edit it.*

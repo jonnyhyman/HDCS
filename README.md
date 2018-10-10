@@ -6,6 +6,7 @@
 *Designed initially for use with testing small hybrid rockets, it can be expanded or reduced to fit the needs of many other instrumentation and control applications.*
 
 **Check out the video demo at this link!**
+
 [![Demo Video](https://img.youtube.com/vi/-lvVTYNzDvo/0.jpg)](https://www.youtube.com/watch?v=-lvVTYNzDvo)
 
 To run, clone the git repository on your local machine, then in a command line :

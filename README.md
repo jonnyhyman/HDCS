@@ -1,6 +1,5 @@
 **Human Digital Control Station [HDCS]**
 ----------
-![View](https://photos-4.dropbox.com/t/2/AADOTByn3Gc_uAQeEVfd4g9bEARQ9L2q0yWo9NMQgamDQw/12/9419831/png/32x32/1/_/1/2/hdcs.png/EJLXggcYm_YOIAcoBw/4bCbrWV41BHylh2dO5toJZT6UY5ltV0EtUFjWbhFklQ?size=1600x1200&size_mode=3)
 
 **HDCS is a command, control, and instrumentation interface.**
 
@@ -24,8 +23,6 @@ You may find you are missing the **dependencies**:
 **Architecture**
 ----------
 This code is intimately intertwined with a number of other systems, chief of which is ADCS. The [ADCS code can be found here](https://github.com/jonnyhyman/ADCS/).
-
-![Structure](https://photos-2.dropbox.com/t/2/AAAR0l0M-Gal1o5NNPScqEbjMYxzwnbddSYxf0zj3ZARug/12/9419831/png/32x32/1/_/1/2/arch.png/EJLXggcYm_YOIAcoBw/2W07iQ74YkNBXnlrxBmlB6-t9DTfnCTmYhg4UvuL_KM?size=1600x1200&size_mode=3)
 
 Ultimately, the micro-controllers (far right of diagram) take the majority of the data in, and actuate the commands.
 

@@ -63,8 +63,3 @@ The creation of a new instrumentation variable into the interface is very simple
 5.  Add the instrumentation variable to Definitions.State as a new key, value pair in the dictionary.
 6. Add the instrumentation's safe limits in State_Limits if needed
 7. Add the key to the Definitions.Control_Keys variable (if the key is not instrumentation)
-
-
-More documentation coming soon!
-
-> Written with [StackEdit](https://stackedit.io/).
